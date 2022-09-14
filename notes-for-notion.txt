@@ -23,5 +23,7 @@ sanity mange - takes you to your projects page.
 
 We then want to go into our sanity studio dir, and run the command 
 sanity start - this initilizes the content studio
+this is where we add and manage content based on the schemas
+
 
 Check schema for notes on how to make a schema
