@@ -1,0 +1,12 @@
+[How to create a schema]
+
+When creating a schema, we simply export default an object.
+
+Inside of that object, we first provide the name of our schema 
+
+Then we give the object the fields property, which is an array of objects.
+Each object is a field inside of the schema. 
+
+We simply create the field with its appropriate name, title, type, etc. 
+Refer to the documentation for more details.
+

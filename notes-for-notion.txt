@@ -12,6 +12,16 @@ Side Note / Pro Tip / 10k commit= When creating a similar project, or a project 
 go ahead and make sure you remove the "/" from git ignore to make it point at all of the node modules folder.
 
 
- Login and choose the schema or make a new one.
+ 
+ 
+3.Login and choose the schema or make a new one.
 
-3. 
+Now you can use sanity commands to move around 
+
+sanity docs - takes you to the docs page 
+sanity mange - takes you to your projects page. 
+
+We then want to go into our sanity studio dir, and run the command 
+sanity start - this initilizes the content studio
+
+Check schema for notes on how to make a schema
