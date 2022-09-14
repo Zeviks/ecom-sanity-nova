@@ -1,0 +1,17 @@
+legacy peer deps is used to ensure that the correct version of the dependecies that are provided inside of the package.json
+are the ones being installed
+
+this is great for tutorials and keeping them fresh for years.
+
+[Sanity Setup]
+To begin you need to install the sanity CLI 
+From the link here: ----------
+Try to use one of the youtube copons for extra bandwith 
+
+Side Note / Pro Tip / 10k commit= When creating a similar project, or a project that contains another node modules folder
+go ahead and make sure you remove the "/" from git ignore to make it point at all of the node modules folder.
+
+
+ Login and choose the schema or make a new one.
+
+3. 
