@@ -27,3 +27,14 @@ this is where we add and manage content based on the schemas
 
 
 Check schema for notes on how to make a schema
+
+
+When we want to import all of our components with one line 
+we simply add an index.js files to the components directory
+
+Then we use 
+export { default as NameOfComponent } from "./NameOfComponent";
+
+If any future errors babel related, go back to 35:20
+
+
