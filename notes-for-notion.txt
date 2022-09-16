@@ -82,5 +82,4 @@ Once we have our data we can then call does props on our func component
  In this case for our banner we want to always render the first element on the array, and we want to also amke sure the array has something in it
  before we try to render.
 
-
- 
+We can now change the hero banner dynamically whenever we have a sale to a different product
