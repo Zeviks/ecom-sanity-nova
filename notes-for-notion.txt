@@ -83,3 +83,8 @@ Once we have our data we can then call does props on our func component
  before we try to render.
 
 We can now change the hero banner dynamically whenever we have a sale to a different product
+
+
+
+In React whenever you wrap a component with another component. 
+You can access the props of the wrapped component on parent componet by passing in the parent as a prop "children"
