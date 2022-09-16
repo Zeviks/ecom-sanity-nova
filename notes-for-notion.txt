@@ -38,3 +38,40 @@ export { default as NameOfComponent } from "./NameOfComponent";
 If any future errors babel related, go back to 35:20
 
 
+
+
+
+When adding sanity, you will first by adding a "lib" folder
+
+We the create a client.js file 
+
+In this file will will import sanity 
+and provide it the proper data 
+
+Such as projectID, dataset, etc.
+This is sanity ways of knowing what project is working with.
+
+
+To find the proper Info, first run sanity mange on the sanity studio folder
+Then once you are at the site, go to the dataset tab 
+
+Grab the project id then 
+We then grab the name of the dataset and pass it to it.
+
+We then create an api token with editor privilges 
+
+then we save our api token inside on an .env files inside of the sanity studio folder 
+This is great for security.
+
+Then once thats done we call the token by doing process.env.NEXT_PUBLIC_SANITY_TOKEN
+
+Also make sure you export the sanityClient and assing it to a variable so it can be used later with ease 
+
+TO enable images we have to the use the sanity image builder and pass it our recently created sanityClient variable
+
+
+
+
+
+
+In next when fetching data we use getServerSideProps. This will pre-render this pafe on each request
