@@ -71,7 +71,16 @@ TO enable images we have to the use the sanity image builder and pass it our rec
 
 
 
+In next when fetching data we use getServerSideProps. This will pre-render this page on each request
+Make sure when returning you add the property props 
 
 
+Once we have our data we can then call does props on our func component 
+ To ensure we're recieving the correct data, at a correct format we can console.log the data to ensure its working. 
+ We can then pass this data into our components as props and use the proivided data in the component dynamically
 
-In next when fetching data we use getServerSideProps. This will pre-render this pafe on each request
+ In this case for our banner we want to always render the first element on the array, and we want to also amke sure the array has something in it
+ before we try to render.
+
+
+ 

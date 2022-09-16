@@ -6,7 +6,8 @@ import { Product, Footer, FooterBanner, HeroBanner } from "../components";
 const Home = ({ products, bannerData }) => {
   return (
     <>
-      <HeroBanner heroBanner={} />
+      <HeroBanner heroBanner={bannerData.length && bannerData[0]} />
+      {console.log(bannerData)}
       <div className="products-heading">
         <h2>Best Selling Products</h2>
         <p>Speakers of many variations</p>
@@ -27,7 +28,9 @@ export const getServerSideProps = async () => {
   const bannerQuery = '*[_type == "banner"]';
   const bannerData = await client.fetch(bannerQuery);
   //Whatever gets returned from getServerSideProps is what is going to populate our dynamic fields.
-  return { bannerData, products };
+  return {
+   props :  { bannerData, products }
+  }
 };
 
 export default Home;
