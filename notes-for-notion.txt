@@ -88,3 +88,12 @@ We can now change the hero banner dynamically whenever we have a sale to a diffe
 
 In React whenever you wrap a component with another component. 
 You can access the props of the wrapped component on parent componet by passing in the parent as a prop "children"
+
+
+When we want to create dynamic pages / product pages 
+ 
+We want to first create the product folde inside of the pages folder 
+
+Then inside of thhat folder we create the dynamic page it should look like this 
+
+[slug].js the [] means it dynamic
