@@ -16,9 +16,9 @@ const ProductDetails = () => {
   );
 };
 
-//getStaticProps is a function we use when we want to pre-render the page at build time using the props returned
-export const getStaticProps = async () => {
-  const query = '*[_type == "product"]';
+//getStaticProps is a function we use when we want to pre-render the page at build time ahead of user's request
+export const getStaticProps = async ({ params: { slug } }) => {
+  const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
   const products = await client.fetch(query);
 
   const bannerQuery = '*[_type == "banner"]';
