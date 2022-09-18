@@ -97,3 +97,8 @@ We want to first create the product folde inside of the pages folder
 Then inside of thhat folder we create the dynamic page it should look like this 
 
 [slug].js the [] means it dynamic
+
+
+
+[getStaticProps] 
+We use this whenever we want to pre-render data 
