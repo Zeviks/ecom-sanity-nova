@@ -101,4 +101,18 @@ Then inside of thhat folder we create the dynamic page it should look like this
 
 
 [getStaticProps] 
-We use this whenever we want to pre-render data 
+will pre-render a page at build time using the props returned 
+But in order for this to work you have to use [getStaticPath]
+
+[getStaticPath]
+If a page has Dynamic Routes and uses getStaticProps,
+it needs to define a list of paths to be statically generated.
+
+When we are loaded into a page that contains dynamic routes, these routes must be present 
+This is neccesary for next.js to know any of does routes exist and are critical 
+
+This make sure the links exist before the user has cliked on them, this way whenever the 
+user clicked on them, the data will load instanlty
+
+[1:26:00] Reference back for more info for the topics above.
+

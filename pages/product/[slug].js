@@ -9,8 +9,13 @@ const ProductDetails = ({ products, product }) => {
     <div>
       <div className="product-detail-container">
         <div>
-          <div>
+          <div className="image-container">
             <img src={urlFor(image && image[0])} />
+          </div>
+          <div className="small-images-container">
+            {image?.map((item, i) => (
+              <img src={urlFor(item)} className="" onMouseEnter="" />
+            ))}
           </div>
         </div>
       </div>
@@ -20,6 +25,25 @@ const ProductDetails = ({ products, product }) => {
 
 //getStaticProps is a function we use when we want to pre-render the page at build time ahead of user's request
 //! R-A-C
+export const getStaticPaths = async () => {
+  const query = `*[_type == "product"] {
+    slug {
+      current
+    }
+  }`;
+  const products = await client.fetch(query);
+  const paths = products.map((product) => ({
+    params: {
+      slug: product.slug.current,
+    },
+  }));
+
+  return {
+    paths,
+    fallback: "blocking",
+  };
+};
+
 export const getStaticProps = async ({ params: { slug } }) => {
   const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
   const productsQuery = '*[_type == "product"]';
