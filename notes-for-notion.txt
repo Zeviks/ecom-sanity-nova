@@ -116,3 +116,13 @@ user clicked on them, the data will load instanlty
 
 [1:26:00] Reference back for more info for the topics above.
 
+
+
+
+onMounEnter - Used to implement the hover effect on the product pages on ecom site.
+
+
+marquee - a scrolling list of products / items.
+
+
+Refer to end of product logic for ideas.
