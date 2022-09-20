@@ -126,3 +126,6 @@ marquee - a scrolling list of products / items.
 
 
 Refer to end of product logic for ideas.
+
+
+Review onAdd.
