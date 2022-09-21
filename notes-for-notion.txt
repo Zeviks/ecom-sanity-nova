@@ -139,3 +139,4 @@ Add ronding for floats
 Api folder is the entire backend of the app in next.js. Unlike react where you meed to setup an express server
 
 
+Spam 424242424242424 for fake stripe card
