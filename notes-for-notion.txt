@@ -134,3 +134,8 @@ Review newCarITem.
 
 Problem: Fix the order of the items when you click on them/
 Add ronding for floats
+
+
+Api folder is the entire backend of the app in next.js. Unlike react where you meed to setup an express server
+
+
