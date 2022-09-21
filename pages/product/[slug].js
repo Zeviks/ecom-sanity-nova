@@ -1,6 +1,4 @@
-import React from "react";
-import { useState } from "react";
-
+import React, { useState } from "react";
 import {
   AiOutlineMinus,
   AiOutlinePlus,
@@ -10,14 +8,19 @@ import {
 
 import { client, urlFor } from "../../lib/client";
 import { Product } from "../../components";
-
 import { useStateContext } from "../../context/StateContext";
 
-const ProductDetails = ({ products, product }) => {
+const ProductDetails = ({ product, products }) => {
   const { image, name, details, price } = product;
-  const { decQty, incQty, qty, onAdd } = useStateContext();
-
   const [index, setIndex] = useState(0);
+  const { decQty, incQty, qty, onAdd, setShowCart } = useStateContext();
+
+  const handleBuyNow = () => {
+    onAdd(product, qty);
+
+    setShowCart(true);
+  };
+
   return (
     <div>
       <div className="product-detail-container">
@@ -63,9 +66,7 @@ const ProductDetails = ({ products, product }) => {
               <span className="minus" onClick={decQty}>
                 <AiOutlineMinus />
               </span>
-              <span className="num" onClick="">
-                {qty}
-              </span>
+              <span className="num">{qty}</span>
               <span className="plus" onClick={incQty}>
                 <AiOutlinePlus />
               </span>
@@ -79,12 +80,13 @@ const ProductDetails = ({ products, product }) => {
             >
               Add to Cart
             </button>
-            <button type="button" className="buy-now" onClick="">
+            <button type="button" className="buy-now" onClick={handleBuyNow}>
               Buy Now
             </button>
           </div>
         </div>
       </div>
+
       <div className="maylike-products-wrapper">
         <h2>You may also like</h2>
         <div className="marquee">
@@ -99,15 +101,16 @@ const ProductDetails = ({ products, product }) => {
   );
 };
 
-//getStaticProps is a function we use when we want to pre-render the page at build time ahead of user's request
-//! R-A-C
 export const getStaticPaths = async () => {
   const query = `*[_type == "product"] {
     slug {
       current
     }
-  }`;
+  }
+  `;
+
   const products = await client.fetch(query);
+
   const paths = products.map((product) => ({
     params: {
       slug: product.slug.current,
@@ -126,6 +129,8 @@ export const getStaticProps = async ({ params: { slug } }) => {
 
   const product = await client.fetch(query);
   const products = await client.fetch(productsQuery);
+
+  console.log(product);
 
   return {
     props: { products, product },
