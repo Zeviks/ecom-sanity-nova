@@ -2,7 +2,6 @@ import React, { useRef } from "react";
 import Link from "next/link";
 import {
   AiOutlineMinus,
-  AioutlinePlus,
   AiOutlineLeft,
   AiOutlineShopping,
   AiOutlinePlus,
@@ -20,7 +19,8 @@ const Cart = () => {
     totalQuantities,
     cartItems,
     setShowCart,
-    toggleCartItemQuantity,
+    toggleCartItemQuanitity,
+    onRemove,
   } = useStateContext();
 
   return (
@@ -70,7 +70,7 @@ const Cart = () => {
                         <span
                           className="minus"
                           onClick={() =>
-                            toggleCartItemQuantity(item._id, "dec")
+                            toggleCartItemQuanitity(item._id, "dec")
                           }
                         >
                           <AiOutlineMinus />
@@ -81,14 +81,18 @@ const Cart = () => {
                         <span
                           className="plus"
                           onClick={() =>
-                            toggleCartItemQuantity(item._id, "inc")
+                            toggleCartItemQuanitity(item._id, "inc")
                           }
                         >
                           <AiOutlinePlus />
                         </span>
                       </p>
                     </div>
-                    <button type="button" className="remove-item" onClick="">
+                    <button
+                      type="button"
+                      className="remove-item"
+                      onClick={() => onRemove(item)}
+                    >
                       <TiDeleteOutline />
                     </button>
                   </div>

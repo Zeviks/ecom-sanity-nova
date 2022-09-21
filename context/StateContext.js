@@ -18,8 +18,8 @@ export const StateContext = ({ children }) => {
       (item) => item._id === product._id
     );
 
-    setTotalPrice(
-      (prevTotalPrice) => prevTotalPrice + product.price * quantity
+    setTotalPrice((prevTotalPrice) =>
+      Math.floor(prevTotalPrice + product.price * quantity)
     );
     setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + quantity);
 
@@ -66,7 +66,9 @@ export const StateContext = ({ children }) => {
         ...newCartItems,
         { ...foundProduct, quantity: foundProduct.quantity + 1 },
       ]);
-      setTotalPrice((prevTotalPrice) => prevTotalPrice + foundProduct.price);
+      setTotalPrice((prevTotalPrice) =>
+        Math.floor(prevTotalPrice + foundProduct.price)
+      );
       setTotalQuantities((prevTotalQuantities) => prevTotalQuantities + 1);
     } else if (value === "dec") {
       if (foundProduct.quantity > 1) {
@@ -74,7 +76,9 @@ export const StateContext = ({ children }) => {
           ...newCartItems,
           { ...foundProduct, quantity: foundProduct.quantity - 1 },
         ]);
-        setTotalPrice((prevTotalPrice) => prevTotalPrice - foundProduct.price);
+        setTotalPrice((prevTotalPrice) =>
+          Math.floor(prevTotalPrice - foundProduct.price)
+        );
         setTotalQuantities((prevTotalQuantities) => prevTotalQuantities - 1);
       }
     }

@@ -129,3 +129,8 @@ Refer to end of product logic for ideas.
 
 
 Review onAdd.
+
+Review newCarITem. 
+
+Problem: Fix the order of the items when you click on them/
+Add ronding for floats
