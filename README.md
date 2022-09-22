@@ -1,34 +1,30 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Modern Full Stack E-Commerce Application with Stripe & Sanity eCommerce
 
-## Getting Started
+A Fully responsive Modern Full Stack Ecommerce application with Payments functionality. With Modern design, animations, the ability to add and edit products on the go using a CMS, all advanced cart functionalities, and most importantly the complete integration with Stripe so that you can cover REAL payments. 
 
-First, run the development server:
+<h1>IMAGE</h1>
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Features ⚡ : 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+✔ Advanced State Management of the entire application using React Context API
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+✔ Next.js : File-based routing, Data fetching that allows server-side rendering and static generation which makes the websites incredibly optimized using things like
+(getServerSideProps, getStaticPaths, getStaticProps).
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+✔ Stripe to manage payments, products, shipping rates, and the entire checkout process
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+✔ Sanity CMS allows us to change the store’s homepage and more importantly, the details of all the products in the store, instantly and on the go!
+It allows developers to focus on developing the application without having to worry about the content, file storage, and databases. 
+They’ll cover the dirty work for us and allow us to build scalable and modern e-commerce web applications extremely easily.
 
-## Learn More
+image
 
-To learn more about Next.js, take a look at the following resources:
+image
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+image
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+image
 
-## Deploy on Vercel
+image
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+image
